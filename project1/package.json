@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "engines": {
     "node": "^22"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "11.0.0"
+    }
   }
 }
