@@ -12,4 +12,6 @@ jobs:
           cache-dependency-path: "project1/package-lock.json"
       
       - name: Check version
-        run: node -v
+        run: |
+          node -v
+          echo "${PWD}"
