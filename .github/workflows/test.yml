@@ -8,10 +8,9 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version-file: "project1/package.json"
-          cache-dependency-path: "project1/package-lock.json"
+          node-version-file: "package.json"
       
       - name: Check version
         run: |
           node -v
-          echo "${PWD}"
+          

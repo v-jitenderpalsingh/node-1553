@@ -1,5 +1,6 @@
 {
   "name": "test",
+  "volta": {"extends": "./package.json"},
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
