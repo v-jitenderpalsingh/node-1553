@@ -1,0 +1,6 @@
+{
+  "name": "test-1628",
+  "volta": {
+    "extends": "./package.json"
+  }
+}

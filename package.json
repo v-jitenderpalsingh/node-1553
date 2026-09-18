@@ -1,10 +1,6 @@
 {
   "name": "test",
-  "volta": {"extends": "./package.json"},
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^9.0.0"
-    }
+  "engines": {
+    "node": "^22"
   }
 }
