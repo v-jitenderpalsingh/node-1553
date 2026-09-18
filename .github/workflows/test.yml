@@ -13,6 +13,18 @@ jobs:
       - name: Check version
         run: |
           node -v
+
+      - name: change node version in package.json
+        run: npm pkg set engines.node="^24"
+      
+      - uses: v-gowridurgad/setup-node@fix-1628
+        with:
+          node-version-file: "test.json"
+      
+      - name: Check version after change
+        run: |
+          node -v
+
   
   test:
     runs-on: ubuntu-latest
@@ -24,5 +36,16 @@ jobs:
           node-version-file: "test.json"
       
       - name: Check version
+        run: |
+          node -v
+      
+      - name: change node version in package.json
+        run: npm pkg set engines.node="^24"
+      
+      - uses: actions/setup-node@main
+        with:
+          node-version-file: "test.json"
+      
+      - name: Check version after change
         run: |
           node -v
