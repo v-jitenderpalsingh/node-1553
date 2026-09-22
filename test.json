@@ -1,6 +1,6 @@
 {
   "name": "test-1628",
   "volta": {
-    "extends": "dummy.json"
+    "extends": "test.json"
   }
 }
