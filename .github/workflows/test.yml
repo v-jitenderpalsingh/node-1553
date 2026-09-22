@@ -8,7 +8,7 @@ jobs:
 
       - uses: v-gowridurgad/setup-node@fix-1628
         with:
-          node-version-file: "example.json"
+          node-version-file: "test.json"
       
       - name: Check version
         run: |
@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@main
         with:
-          node-version-file: "example.json"
+          node-version-file: "test.json"
       
       - name: Check version
         run: |
