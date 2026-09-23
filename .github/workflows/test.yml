@@ -12,7 +12,8 @@ jobs:
       
       - name: Check version
         run: |
-          node -v
+          node --version
+          npm --version
 
   
   test:
@@ -26,4 +27,5 @@ jobs:
       
       - name: Check version
         run: |
-          node -v
+          node --version
+          npm --version
