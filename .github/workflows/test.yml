@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: v-gowridurgad/setup-node@fix-1628
+      - uses: v-jitenderpalsingh/setup-node@test-1553
         with:
           node-version-file: "package.json"
       

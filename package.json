@@ -1,6 +1,12 @@
 {
   "name": "test",
-  "volta": {
-   "extends": "./loop/package.json"
+  "engines": {
+    "node": "^22"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.10.0"
+    }
   }
 }
