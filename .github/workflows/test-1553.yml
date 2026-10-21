@@ -1,0 +1,19 @@
+name: Test issue 1553
+on: [push, workflow_dispatch]
+jobs:
+  test-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: check npm version
+        run: npm --version
+
+      - uses: actions/setup-node@main
+        with:
+          node-version-file: "package.json"
+      
+      - name: Check version
+        run: |
+          node --version
+          npm --version
