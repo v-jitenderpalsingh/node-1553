@@ -2,7 +2,7 @@ name: Test issue 1553
 on: [push, workflow_dispatch]
 jobs:
   test-fix:
-    runs-on: ubuntu-latest
+    runs-on: 	ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
 
