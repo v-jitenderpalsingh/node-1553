@@ -22,6 +22,6 @@ jobs:
       - name: Setup Node
         uses: v-gowridurgad/setup-node@volts-fix
         with:
-          node-version-file: "a.json"
+          node-version-file: "test.json"
       
       
