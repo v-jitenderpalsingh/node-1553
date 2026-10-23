@@ -17,7 +17,7 @@ jobs:
           ln -s "$HOME/dummy-path/test.txt" "$GITHUB_WORKSPACE/linked.txt"
 
           # Show where the symlink actually points, without printing file contents.
-          readlink -f "$GITHUB_WORKSPACE/volta-symlink-test/linked.txt"
+          readlink -f "$GITHUB_WORKSPACE/linked.txt"
 
       - name: Setup Node
         uses: v-gowridurgad/setup-node@volts-fix
