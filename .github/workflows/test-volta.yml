@@ -14,7 +14,7 @@ jobs:
 
       - name: create a symlink
         run: |
-          ln -s "$HOME/dummy-path/test.txt" "$GITHUB_WORKSPACE/volta-symlink-test/linked.txt"
+          ln -s "$HOME/dummy-path/test.txt" "$GITHUB_WORKSPACE/linked.txt"
 
           # Show where the symlink actually points, without printing file contents.
           readlink -f "$GITHUB_WORKSPACE/volta-symlink-test/linked.txt"

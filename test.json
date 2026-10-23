@@ -1,6 +1,6 @@
 {
   "name": "test-1628",
   "volta": {
-    "extends": "volta-symlink-test/linked.txt"
+    "extends": "linked.txt"
   }
 }
