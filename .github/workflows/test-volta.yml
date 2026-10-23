@@ -1,0 +1,20 @@
+name: test-volta
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@main
+
+      - name: create a file in dummy path outside workspace
+        run: |
+          mkdir -p ${HOME}/dummy-path
+          echo 'Hello World!!!!' > "$HOME/dummy-path/test.txt"
+
+      - name: Setup Node
+        uses: actions/setup-node@main
+        with:
+          node-version-file: test.json
+      
+      
