@@ -1,6 +1,6 @@
 {
   "name": "test-1628",
   "volta": {
-    "extends": "/home/runner/dummy-path/test.txt"
+    "extends": "volta-symlink-test/linked.txt"
   }
 }

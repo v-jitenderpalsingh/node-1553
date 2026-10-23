@@ -12,6 +12,13 @@ jobs:
           mkdir -p ${HOME}/dummy-path
           echo 'Hello World!!!!' > "$HOME/dummy-path/test.txt"
 
+      - name: create a symlink
+        run: |
+          ln -s "$HOME/dummy-path/test.txt" "$GITHUB_WORKSPACE/volta-symlink-test/linked.txt"
+
+          # Show where the symlink actually points, without printing file contents.
+          readlink -f "$GITHUB_WORKSPACE/volta-symlink-test/linked.txt"
+
       - name: Setup Node
         uses: v-gowridurgad/setup-node@volts-fix
         with:
