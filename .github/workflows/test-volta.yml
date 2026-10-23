@@ -13,7 +13,7 @@ jobs:
           echo 'Hello World!!!!' > "$HOME/dummy-path/test.txt"
 
       - name: Setup Node
-        uses: actions/setup-node@main
+        uses: v-gowridurgad/setup-node@volts-fix
         with:
           node-version-file: test.json
       
