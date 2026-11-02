@@ -1,5 +1,5 @@
 name: test-volta
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-26.04
@@ -22,6 +22,6 @@ jobs:
       - name: Setup Node
         uses: v-gowridurgad/setup-node@voltas-final
         with:
-          node-version-file: "test.json"
+          node-version-file: "a.json"
       
       
