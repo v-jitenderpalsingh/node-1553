@@ -1,6 +1,6 @@
 {
   "name": "test-1628",
   "volta": {
-    "extends": "a.txt"
+    "extends": "/home/runner/dummy-path/test.txt"
   }
 }
