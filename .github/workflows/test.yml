@@ -8,7 +8,7 @@ jobs:
 
       - uses: v-gowridurgad/setup-node@voltas-final
         with:
-          node-version-file: "a.json"
+          node-version-file: "test.json"
       
       - name: Check version
         run: |
@@ -22,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@main
         with:
-          node-version-file: "a.json"
+          node-version-file: "test.json"
       
       - name: Check version
         run: |
