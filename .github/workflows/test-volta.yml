@@ -20,7 +20,7 @@ jobs:
           readlink -f "$GITHUB_WORKSPACE/linked.txt"
 
       - name: Setup Node
-        uses: v-gowridurgad/setup-node@volts-fix
+        uses: v-gowridurgad/setup-node@voltas-final
         with:
           node-version-file: "test.json"
       
