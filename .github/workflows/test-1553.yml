@@ -13,6 +13,7 @@ jobs:
         with:
           node-version-file: "a.json"
           package-manager-cache: false
+          cache: "npm"
       
       - name: Check version
         run: |
