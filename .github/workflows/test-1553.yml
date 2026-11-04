@@ -4,17 +4,30 @@ jobs:
   test-fix:
     runs-on: 	ubuntu-26.04
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout repository
+        uses: actions/checkout@main
 
-      - name: check npm version
-        run: npm --version
-
-      - uses: actions/setup-node@main
+      - name: Setup Node.js
+        uses: v-jitenderpalsingh/setup-node@test-1553
         with:
-          node-version-file: "a.json"
-          package-manager-cache: false
-          cache: "npm"
+          node-version-file: "package.json"
       
+      - name: Check version
+        run: |
+          node --version
+          npm --version
+
+  test:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version-file: "package.json"
+
       - name: Check version
         run: |
           node --version
