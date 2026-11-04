@@ -1,6 +1,11 @@
 {
-  "name": "test-volta-extends",
-  "volta": {
-    "extends": "test.json"
+  "name": "a",
+  "engines": {
+    "node": "^24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm"
+    }
   }
 }
