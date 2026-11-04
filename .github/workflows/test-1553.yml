@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@main
         with:
           node-version-file: "a.json"
+          package-manager-cache: false
       
       - name: Check version
         run: |
