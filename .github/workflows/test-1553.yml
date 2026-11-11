@@ -1,23 +1,6 @@
 name: Test issue 1553
 on: [push, workflow_dispatch]
 jobs:
-  test-fix:
-    runs-on: 	windows-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-
-      - name: Setup Node.js
-        uses: eran132/setup-node@fix/npm-cache-devengines
-        with:
-          node-version: "^22"
-          node-version-file: "package.json"
-      
-      - name: Check version
-        run: |
-          node --version
-          npm --version
-
   test:
     runs-on: 	windows-latest
     steps:
@@ -27,10 +10,26 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
-          node-version: "^22"
-          node-version-file: "test.json"
+          node-version-file: "package.json"
+          package-manager-cache: false
 
       - name: Check version
+        run: |
+          node --version
+          npm --version
+
+      - name: upgrade npm
+        run: npm install -g npm@latest
+
+      - name: Check npm version after upgrade
+        run: npm --version
+
+      - name: Enable caching by second setup-node
+        uses: actions/setup-node@main
+        with:
+          cache: 'npm'
+      
+      - name: Check version after enabling caching
         run: |
           node --version
           npm --version
