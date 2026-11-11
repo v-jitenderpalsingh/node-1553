@@ -8,9 +8,8 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup Node.js
-        uses: v-jitenderpalsingh/setup-node@test-1553
+        uses: eran132/setup-node@fix/npm-cache-devengines
         with:
-          node-version: "^24"
           node-version-file: "package.json"
       
       - name: Check version
@@ -27,7 +26,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
-          node-version: "^24"
           node-version-file: "package.json"
 
       - name: Check version
