@@ -2,7 +2,7 @@ name: Test issue 1553
 on: [push, workflow_dispatch]
 jobs:
   test-fix:
-    runs-on: 	ubuntu-26.04
+    runs-on: 	windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
@@ -10,6 +10,7 @@ jobs:
       - name: Setup Node.js
         uses: v-jitenderpalsingh/setup-node@test-1553
         with:
+          node-version: "^24"
           node-version-file: "package.json"
       
       - name: Check version
@@ -18,7 +19,7 @@ jobs:
           npm --version
 
   test:
-    runs-on: ubuntu-26.04
+    runs-on: 	windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
@@ -26,6 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
+          node-version: "^24"
           node-version-file: "package.json"
 
       - name: Check version
