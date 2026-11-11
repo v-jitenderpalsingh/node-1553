@@ -10,6 +10,7 @@ jobs:
       - name: Setup Node.js
         uses: eran132/setup-node@fix/npm-cache-devengines
         with:
+          node-version: "^22"
           node-version-file: "package.json"
       
       - name: Check version
@@ -26,6 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
+          node-version: "^22"
           node-version-file: "test.json"
 
       - name: Check version
