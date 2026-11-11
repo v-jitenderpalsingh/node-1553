@@ -6,8 +6,10 @@
   "devEngines": {
     "packageManager": {
       "name": "npm",
-      "version": "^11.10.0",
-      "os": "linux"
+      "version": "^11.10.0"
+    },
+    "os": {
+      "name": "linux"
     }
   }
 }
