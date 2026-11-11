@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
-          node-version-file: "package.json"
+          node-version-file: "test.json"
 
       - name: Check version
         run: |
