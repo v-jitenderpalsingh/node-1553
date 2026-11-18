@@ -1,12 +1,12 @@
 name: Test
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   test-fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
 
-      - uses: v-gowridurgad/setup-node@voltas-final
+      - uses: v-gowridurgad/setup-node@fix-voltas
         with:
           node-version-file: "test.json"
       
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@main
+      - uses: v-gowridurgad/setup-node@fix-voltas
         with:
           node-version-file: "a.json"
       
