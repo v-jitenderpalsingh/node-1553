@@ -3,14 +3,7 @@
   "engines": {
     "node": "^24"
   },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "^24"
-    },
-    "packageManager": {
-      "name": "npm",
-      "version": "^12"
-    }
+  "volta": {
+    "extends": "test.json"
   }
 }
