@@ -1,8 +1,5 @@
 {
   "name": "test",
-  "engines": {
-    "node": "^24"
-  },
   "volta": {
     "extends": "test.json"
   }
