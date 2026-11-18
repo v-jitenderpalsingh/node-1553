@@ -1,8 +1,8 @@
 name: test-volta
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   test-fix:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@main
